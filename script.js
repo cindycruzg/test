@@ -4,6 +4,20 @@ const assistantClose = document.getElementById("assistant-close");
 const promptChips = document.querySelectorAll(".prompt-chip");
 const assistantInput = document.getElementById("assistant-input");
 const assistantPanel = document.getElementById("assistant-panel");
+const sendButton = document.querySelector(".send-button");
+
+function syncInputState() {
+  if (!(assistantInput instanceof HTMLTextAreaElement)) {
+    return;
+  }
+
+  assistantInput.style.height = "auto";
+  assistantInput.style.height = `${Math.min(assistantInput.scrollHeight, 160)}px`;
+
+  if (sendButton instanceof HTMLButtonElement) {
+    sendButton.disabled = assistantInput.value.trim().length === 0;
+  }
+}
 
 navToggle?.addEventListener("click", () => {
   const isCollapsed = body.classList.toggle("nav-collapsed");
@@ -20,10 +34,16 @@ promptChips.forEach((chip) => {
       return;
     }
 
-    assistantInput.value = chip.textContent?.trim() ?? "";
+    assistantInput.value = chip.getAttribute("data-prompt") ?? "";
+    syncInputState();
     assistantInput.focus();
   });
 });
+
+if (assistantInput instanceof HTMLTextAreaElement) {
+  assistantInput.addEventListener("input", syncInputState);
+  syncInputState();
+}
 
 assistantPanel?.addEventListener("transitionend", () => {
   if (!body.classList.contains("assistant-hidden")) {
