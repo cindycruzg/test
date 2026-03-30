@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chatbot Course Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-actions">
+          <button class="icon-button" aria-label="Search">
+            <img src="https://www.figma.com/api/mcp/asset/04fb4774-7236-4a6f-9d16-62df6883b8c2" alt="" />
+          </button>
+          <span class="topbar-separator" aria-hidden="true"></span>
+          <button class="icon-button" aria-label="Help">
+            <img src="https://www.figma.com/api/mcp/asset/7c84c10e-66b1-40b2-bb15-cde5d7185208" alt="" />
+          </button>
+          <span class="topbar-separator" aria-hidden="true"></span>
+          <button class="text-icon-button" aria-label="Messages">
+            <img src="https://www.figma.com/api/mcp/asset/2aa70605-1fb7-47e3-9a76-5a0789f028c9" alt="" />
+            <span>Messages</span>
+          </button>
+          <span class="topbar-separator" aria-hidden="true"></span>
+          <button class="text-icon-button" aria-label="User menu">
+            <img src="https://www.figma.com/api/mcp/asset/d6e02a53-aa57-4a53-9c15-8118410a6ff0" alt="" />
+            <span>Jane Krishnaswarmy</span>
+            <img src="https://www.figma.com/api/mcp/asset/c875b6e2-353c-4086-8e91-9c8565b0850b" alt="" />
+          </button>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <aside class="course-nav" id="course-nav">
+          <nav class="course-nav-primary" aria-label="Primary">
+            <a class="nav-row" href="#">
+              <span class="nav-row-main">
+                <img src="https://www.figma.com/api/mcp/asset/e649a129-343a-46b4-babf-248271d5f73d" alt="" />
+                <span>Home</span>
+              </span>
+            </a>
+            <a class="nav-row" href="#">
+              <span class="nav-row-main">
+                <img src="https://www.figma.com/api/mcp/asset/c671d9e8-2744-42c6-8477-16382235296b" alt="" />
+                <span>Scores</span>
+              </span>
+            </a>
+            <a class="nav-row" href="#">
+              <span class="nav-row-main">
+                <img src="https://www.figma.com/api/mcp/asset/406db1e0-c50d-4115-a0b6-5d2ffacd1954" alt="" />
+                <span>Discussions</span>
+              </span>
+            </a>
+            <a class="nav-row nav-row-text-only" href="#">
+              <span class="nav-row-main">
+                <span>Getting Started</span>
+              </span>
+            </a>
+          </nav>
+
+          <section class="lesson-nav">
+            <button class="lesson-row lesson-row-active">
+              <span>Lesson 1: Orientation to Pharmacy</span>
+              <span class="progress progress-early" aria-hidden="true"></span>
+            </button>
+
+            <div class="lesson-subnav">
+              <a class="subnav-row is-current" href="#">Reading Material</a>
+              <a class="subnav-row" href="#">Lesson 1 Reading Assignment</a>
+              <a class="subnav-row" href="#">Program Overview</a>
+              <a class="subnav-row" href="#">Learning Objectives</a>
+              <a class="subnav-row" href="#">Getting Started</a>
+              <a class="subnav-row" href="#">Chapter 1: The History of Pharmacology</a>
+              <a class="subnav-row" href="#">Chapter 2: Pharmacy Technician Organizations, Exams, and Competencies</a>
+              <a class="subnav-row" href="#">Chapter 3: Pharmacy Reference Materials</a>
+              <a class="subnav-row" href="#">Chapter 4: Pharmacy Terminology</a>
+              <a class="subnav-row" href="#">Chapter 5: Body and Organ Systems Terminology</a>
+              <a class="subnav-row" href="#">Lesson 2: Pharmacy Law &amp; Ethics</a>
+              <a class="subnav-row" href="#">Lesson 3: Pharmaceutical Calculations</a>
+              <a class="subnav-row" href="#">Lesson 4: Pharmacology I: Basics</a>
+            </div>
+          </section>
+        </aside>
+
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="true" aria-controls="course-nav">
+          <img src="https://www.figma.com/api/mcp/asset/230f8334-9544-44b8-80ec-f05f06496ca3" alt="" />
+        </button>
+
+        <section class="lesson-stage">
+          <div class="lesson-card">
+            <div class="lesson-card-inner">
+              <header class="lesson-header">
+                <div class="lesson-header-left">
+                  <button class="course-icon-button" aria-label="Back">
+                    <img src="https://www.figma.com/api/mcp/asset/67fdf0ae-479c-4efe-81d9-bbfbbee24f1c" alt="" />
+                  </button>
+                  <button class="course-icon-button" aria-label="Bookmark">
+                    <img src="https://www.figma.com/api/mcp/asset/55bbd478-ddc5-4ce3-baee-4e1cf5aea924" alt="" />
+                  </button>
+                </div>
+
+                <div class="lesson-title-block">
+                  <p class="course-name">1ph-1-Pharmacy Technician v.4 - FINAL (live 1ph-8)</p>
+                  <p class="course-subtitle">Lesson 1: Orientation to PharmacyReading Material</p>
+                  <h1>Program Overview</h1>
+                </div>
+
+                <div class="lesson-header-right">
+                  <button class="course-icon-button badge-button" aria-label="Questions">
+                    <img src="https://www.figma.com/api/mcp/asset/7ec60dd7-0885-4872-b6bc-24d484acdfe7" alt="" />
+                    <span class="badge-dot" aria-hidden="true"></span>
+                  </button>
+                  <button class="course-icon-button" aria-label="Print">
+                    <img src="https://www.figma.com/api/mcp/asset/a3a4eaca-0cc3-4c82-bd5c-711d06888335" alt="" />
+                  </button>
+                  <button class="course-icon-button" aria-label="Expand">
+                    <img src="https://www.figma.com/api/mcp/asset/4bf0ea97-db29-4293-8368-f761c65b42a4" alt="" />
+                  </button>
+                </div>
+              </header>
+
+              <article class="lesson-article">
+                <section class="content-block">
+                  <h2>Program Overview</h2>
+                  <p>
+                    Welcome to your first lesson of the Pharmacy Technician program! You probably have a lot of
+                    questions. How did the world of pharmacy start? What exactly is a pharmacy technician? What does a
+                    pharmacy technician do? You'll find the answers to these questions in this lesson.
+                  </p>
+                  <p>
+                    But first, let's go over what you'll learn in the program as a whole. After successfully
+                    completing this program, you'll be ready to take the Certified Pharmacy Technician certification
+                    exam and begin your career as a CPhT (Certified Pharmacy Technician).
+                  </p>
+                  <p>Here's an overview of the topics you'll be studying in this program:</p>
+                </section>
+
+                <section class="content-block content-block-list">
+                  <div class="seal-wrap">
+                    <img
+                      src="https://www.figma.com/api/mcp/asset/0a8e4193-ee44-4900-a022-6d4e33136616"
+                      alt="CPhT certification seal"
+                    />
+                  </div>
+                  <ul>
+                    <li>Pharmacy laws and ethics</li>
+                    <li>Pharmaceutical calculations</li>
+                    <li>Prescriptions, labels, and errors</li>
+                    <li>Pharmacology - basics and specific populations</li>
+                    <li>Pharmacology - neurological body systems</li>
+                    <li>Pharmacology - muscles, heart, and lungs body systems</li>
+                    <li>Pharmacology - multi-body systems</li>
+                    <li>Communications and billing</li>
+                  </ul>
+                </section>
+
+                <section class="content-block">
+                  <p>
+                    You'll also have two hands-on lab components in this program: one for retail practice, and one for
+                    hospital practice.
+                  </p>
+                  <div class="wide-image">
+                    <img
+                      src="https://www.figma.com/api/mcp/asset/e549e9b6-5e3e-4f12-9b7d-a4bfc3c4c208"
+                      alt="Students participating in lab discussion"
+                    />
+                  </div>
+                  <p>
+                    All right, ready to get started? On the next page we'll begin by looking at the learning
+                    objectives for our first lesson.
+                  </p>
+                </section>
+              </article>
+
+              <section class="activity-complete" aria-label="Activity complete">
+                <div class="activity-icon">
+                  <img src="https://www.figma.com/api/mcp/asset/7cc43aa5-e9bf-4944-81e9-91d80ba625df" alt="" />
+                </div>
+                <div>
+                  <p>Activity Complete</p>
+                  <button class="inline-link">Undo</button>
+                </div>
+              </section>
+
+              <section class="next-up" aria-label="Next lesson">
+                <div class="next-up-label">Next Up</div>
+                <div class="next-up-body">
+                  <a href="#">Learning Objectives</a>
+                  <span>activity</span>
+                </div>
+              </section>
+
+              <footer class="page-footer">
+                <p>Student Support</p>
+                <p>&copy; 2025 Cengage Learning, Inc. All Rights Reserved</p>
+              </footer>
+            </div>
+          </div>
+        </section>
+
+        <aside class="assistant-panel" id="assistant-panel">
+          <header class="assistant-header">
+            <div class="assistant-title">
+              <img src="https://www.figma.com/api/mcp/asset/d1513da3-153c-4111-bd96-e8ca404961a7" alt="" />
+              <span>Learning Assistant</span>
+            </div>
+            <button class="assistant-close" id="assistant-close" aria-label="Close assistant">
+              <img src="https://www.figma.com/api/mcp/asset/7fff1d2d-9c68-41ee-b151-8e5ea5ef36e7" alt="" />
+            </button>
+          </header>
+
+          <div class="assistant-body">
+            <section class="assistant-message">
+              <p>
+                Hi! I'm your Learning Assistant. I'm here to help you with lessons, support your study, and answer
+                program questions.
+              </p>
+              <p>How can I help you today?</p>
+            </section>
+
+            <section class="assistant-prompts">
+              <p class="assistant-prompts-label">Try one of these:</p>
+              <button class="prompt-chip" type="button">How do I get my textbooks?</button>
+              <button class="prompt-chip" type="button">Could you explain a concept for me?</button>
+              <button class="prompt-chip" type="button">Can you help me with an issue related to my assignment?</button>
+            </section>
+          </div>
+
+          <form class="assistant-input-wrap">
+            <label class="sr-only" for="assistant-input">Ask the learning assistant a question</label>
+            <div class="assistant-input">
+              <textarea id="assistant-input" rows="2" placeholder="Ask me anything..."></textarea>
+              <button class="send-button" type="submit" aria-label="Send message">
+                <img src="https://www.figma.com/api/mcp/asset/c8d92d28-af47-4d66-b436-db5a1f8eb150" alt="" />
+              </button>
+            </div>
+          </form>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
