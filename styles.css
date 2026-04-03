@@ -122,6 +122,12 @@ img {
   line-height: 24px;
 }
 
+.nav-link img {
+  height: 5px;
+  padding: 7.5px 5px;
+  width: 10px;
+}
+
 .nav-link img,
 .icon-button img,
 .cta-link__icon img,
@@ -195,13 +201,14 @@ img {
 .empty-state h3 {
   color: var(--gray-700);
   font-family: var(--font-heading);
+  letter-spacing: 0;
   margin: 0;
 }
 
 .rail-card h2 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 24px;
   margin-bottom: 12px;
 }
 
@@ -287,6 +294,7 @@ img {
   font-size: 38px;
   font-weight: 600;
   line-height: 54px;
+  letter-spacing: -0.01em;
 }
 
 .section-block {
@@ -300,7 +308,7 @@ img {
 .section-heading h2 {
   font-size: 32px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 40px;
   padding-top: 24px;
 }
 
@@ -591,9 +599,20 @@ img {
   gap: 0;
 }
 
-.social-links a img {
+.social-links a {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 30px;
   height: 30px;
+  justify-content: center;
   width: 30px;
+}
+
+.social-links a img {
+  display: block;
+  max-height: 30px;
+  max-width: 30px;
+  object-fit: contain;
 }
 
 .footer-logo {
@@ -724,6 +743,7 @@ img {
   .page-heading h1 {
     font-size: 32px;
     line-height: 48px;
+    letter-spacing: -0.01em;
   }
 
   .tab-nav--horizontal {
@@ -740,7 +760,7 @@ img {
 
   .section-heading h2 {
     font-size: 30px;
-    line-height: 30px;
+    line-height: 38px;
     padding-top: 24px;
   }
 
