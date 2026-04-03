@@ -16,165 +16,142 @@
     <div class="student-center">
       <header class="portal-header">
         <div class="portal-header__inner">
-          <div class="portal-header__brand">
+          <div class="portal-header__left">
+            <button
+              class="mobile-icon-button"
+              id="mobile-menu-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+              aria-label="Open navigation"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
             <a class="portal-header__logo-link" href="#" aria-label="ed2go home">
               <img
                 class="portal-header__logo"
-                src="https://www.figma.com/api/mcp/asset/b97892b4-b3dd-45b7-8d1e-e6ac0956cc5b"
+                src="https://www.figma.com/api/mcp/asset/64f083eb-af17-43b2-960f-310c08cb9527"
                 alt="ed2go"
               />
             </a>
+
             <nav class="portal-header__nav" aria-label="Primary">
               <button class="nav-link" type="button">
                 <span>Explore Courses</span>
-                <img src="https://www.figma.com/api/mcp/asset/f12a9b90-a617-45b9-ba0f-1dcc7021d175" alt="" />
+                <img src="https://www.figma.com/api/mcp/asset/d8d23fcb-eeef-43d9-afb0-2a3c9f69a8b9" alt="" />
               </button>
               <button class="nav-link" type="button">
                 <span>Resources</span>
-                <img src="https://www.figma.com/api/mcp/asset/f12a9b90-a617-45b9-ba0f-1dcc7021d175" alt="" />
-              </button>
-              <button class="nav-link" type="button">
-                <span>Achievements</span>
+                <img src="https://www.figma.com/api/mcp/asset/d8d23fcb-eeef-43d9-afb0-2a3c9f69a8b9" alt="" />
               </button>
             </nav>
           </div>
 
           <div class="portal-header__actions">
-            <button class="nav-link" type="button">
+            <button class="nav-link nav-link--account" type="button">
               <span>Account</span>
-              <img src="https://www.figma.com/api/mcp/asset/f12a9b90-a617-45b9-ba0f-1dcc7021d175" alt="" />
+              <img src="https://www.figma.com/api/mcp/asset/d8d23fcb-eeef-43d9-afb0-2a3c9f69a8b9" alt="" />
             </button>
             <button class="icon-button" type="button" aria-label="Search">
-              <img src="https://www.figma.com/api/mcp/asset/1b762ca5-ec3b-41a9-97a7-9e6a3355e3e3" alt="" />
+              <img src="https://www.figma.com/api/mcp/asset/50d4e7f0-2a30-404a-9605-c5e167fbf829" alt="" />
             </button>
             <div class="contact-block">
               <span>Contact Us</span>
               <a href="tel:8664415454">866-441-5454</a>
             </div>
           </div>
+        </div>
 
-          <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-expanded="false">
-            Menu
-          </button>
+        <div class="mobile-nav" id="mobile-nav" hidden>
+          <button class="mobile-nav__item" type="button">Explore Courses</button>
+          <button class="mobile-nav__item" type="button">Resources</button>
+          <button class="mobile-nav__item" type="button">Account</button>
+          <a class="mobile-nav__phone" href="tel:8664415454">Contact Us: 866-441-5454</a>
         </div>
       </header>
 
       <main class="page-shell">
-        <aside class="side-rail" id="side-rail">
-          <section class="rail-card rail-card--menu">
+        <aside class="side-rail">
+          <section class="rail-card rail-card--nav">
             <h2>Your Courses</h2>
-            <nav aria-label="Course status">
-              <a class="status-link is-active" href="#">Current</a>
-              <a class="status-link" href="#">Upcoming</a>
-              <a class="status-link" href="#">Previous</a>
-            </nav>
+            <nav class="tab-nav tab-nav--vertical" id="desktop-tab-nav" aria-label="Course status"></nav>
           </section>
 
-          <section class="rail-card">
+          <section class="rail-card rail-card--cta">
             <h2>Career Resources</h2>
-            <p>Access tools and guidance to help you prepare for your next role.</p>
-            <a class="rail-link" href="#">
-              <img src="https://www.figma.com/api/mcp/asset/96eba875-2257-49d7-9d21-e334592a2892" alt="" />
+            <p>Access resources to help you in your chosen career.</p>
+            <a class="cta-link" href="#">
+              <span class="cta-link__icon">
+                <img src="https://www.figma.com/api/mcp/asset/96eba875-2257-49d7-9d21-e334592a2892" alt="" />
+              </span>
               <span>Virtual Career Center</span>
             </a>
           </section>
 
-          <section class="rail-card">
+          <section class="rail-card rail-card--cta">
             <h2>Get Support</h2>
-            <p>Need help with your coursework or platform access? We’re here for you.</p>
-            <div class="support-line">
-              <span>Call Us:</span>
-              <a href="tel:8664415454">1-866-441-5454</a>
-            </div>
-          </section>
-
-          <section class="rail-card rail-card--accent">
-            <h2>Student Checklist</h2>
-            <ul class="mini-list">
-              <li>Review new announcements</li>
-              <li>Launch your current course</li>
-              <li>Log lab hours before Friday</li>
-            </ul>
+            <p>Need help? We've got you covered.</p>
+            <a class="cta-link cta-link--support" href="tel:8664415454">
+              <span class="cta-link__icon">
+                <img src="https://www.figma.com/api/mcp/asset/27be01aa-adb6-4fda-b2dd-248ad86c62b9" alt="" />
+              </span>
+              <span>Call Us: 1-866-441-5454</span>
+            </a>
           </section>
         </aside>
 
         <section class="main-content">
-          <header class="hero-banner">
-            <div class="hero-copy">
-              <p class="eyebrow">Welcome back, Jane</p>
-              <h1>Student Center</h1>
-              <p class="hero-description">
-                Track active courses, pick up optional resources, and find the support you need in one place.
-              </p>
-            </div>
-
-            <div class="hero-stats" aria-label="Student summary">
-              <article class="stat-card">
-                <span class="stat-card__label">Active Courses</span>
-                <strong class="stat-card__value">2</strong>
-              </article>
-              <article class="stat-card">
-                <span class="stat-card__label">Upcoming Tasks</span>
-                <strong class="stat-card__value">5</strong>
-              </article>
-              <article class="stat-card">
-                <span class="stat-card__label">Support Rating</span>
-                <strong class="stat-card__value">24/7</strong>
-              </article>
-            </div>
+          <header class="page-heading">
+            <h1>Welcome, Jane!</h1>
           </header>
 
-          <section class="announcement-strip" aria-label="Important updates">
-            <div>
-              <p class="announcement-strip__eyebrow">Important</p>
-              <p class="announcement-strip__text">Your Pharmacy Technician progress review opens April 8.</p>
-            </div>
-            <a href="#">View details</a>
-          </section>
+          <nav class="tab-nav tab-nav--horizontal" id="mobile-tab-nav" aria-label="Course status"></nav>
 
           <section class="section-block">
             <div class="section-heading">
-              <div>
-                <p class="section-kicker">Current learning</p>
-                <h2>Current Courses</h2>
-              </div>
-              <a href="#">View all courses</a>
+              <h2 id="course-section-title">Current Courses</h2>
             </div>
-            <div class="course-list" id="current-courses"></div>
+            <div class="course-list" id="course-list"></div>
+            <div class="empty-state" id="empty-state" hidden>
+              <h3 id="empty-state-title"></h3>
+              <p id="empty-state-body"></p>
+              <a href="#">View our catalog</a>
+            </div>
           </section>
 
-          <section class="feature-grid" aria-label="Quick access">
-            <article class="info-panel">
-              <p class="section-kicker">Support</p>
-              <h2>Need help staying on track?</h2>
-              <p>
-                Reach your instructor, review billing support, or find answers to common questions without leaving the
-                Student Center.
-              </p>
-              <div class="pill-row">
-                <span class="pill">Instructor access</span>
-                <span class="pill">Billing help</span>
-                <span class="pill">Course support</span>
-              </div>
-            </article>
+          <section class="mobile-support">
+            <section class="rail-card rail-card--cta">
+              <h2>Career Resources</h2>
+              <p>Access resources to help you in your chosen career.</p>
+              <a class="cta-link" href="#">
+                <span class="cta-link__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/96eba875-2257-49d7-9d21-e334592a2892" alt="" />
+                </span>
+                <span>Virtual Career Center</span>
+              </a>
+            </section>
 
-            <article class="info-panel info-panel--soft">
-              <p class="section-kicker">This week</p>
-              <h2>Student to-dos</h2>
-              <ul class="task-list" id="task-list"></ul>
-            </article>
+            <section class="rail-card rail-card--cta">
+              <h2>Get Support</h2>
+              <p>Need help? We've got you covered.</p>
+              <a class="cta-link cta-link--support" href="tel:8664415454">
+                <span class="cta-link__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/27be01aa-adb6-4fda-b2dd-248ad86c62b9" alt="" />
+                </span>
+                <span>Call Us: 1-866-441-5454</span>
+              </a>
+            </section>
           </section>
 
-          <section class="section-block resources-section">
+          <section class="section-block resources-section" id="resources-section">
             <div class="section-heading">
-              <div>
-                <p class="section-kicker">Optional extras</p>
-                <h2>Additional Resources</h2>
-              </div>
-              <a href="#">Browse all resources</a>
+              <h2>Additional Resources</h2>
             </div>
             <p class="section-description">
-              Courses come with additional resources to supplement your learning. Start these whenever you’re ready.
+              Courses come with additional resources to supplement your learning. Start these when you're ready.
             </p>
             <div class="course-list" id="resource-courses"></div>
           </section>
@@ -183,53 +160,73 @@
 
       <footer class="site-footer">
         <div class="site-footer__inner">
-          <section class="footer-column">
-            <h2>Popular Courses</h2>
-            <ul>
-              <li><a href="#">Accounting and Finance</a></li>
+          <section class="footer-column footer-column--links">
+            <button class="footer-toggle" type="button" aria-expanded="true">
+              <span>Courses</span>
+              <span class="footer-toggle__chevron"></span>
+            </button>
+            <ul class="footer-list">
+              <li><a href="#">Arts and Design</a></li>
+              <li><a href="#">Beauty Trades</a></li>
               <li><a href="#">Business</a></li>
               <li><a href="#">Computer Applications</a></li>
-              <li><a href="#">Design and Composition</a></li>
-              <li><a href="#">Healthcare and Medical</a></li>
+              <li><a href="#">Computer Science</a></li>
+              <li><a href="#">Construction and Trades</a></li>
+              <li><a href="#">Health and Fitness</a></li>
+              <li><a href="#">Hospitality</a></li>
               <li><a href="#">Information Technology</a></li>
+              <li><a href="#">Language</a></li>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Math and Science</a></li>
               <li><a href="#">Teacher Professional Development</a></li>
+              <li><a href="#">Test Prep</a></li>
+              <li><a href="#">Writing</a></li>
             </ul>
           </section>
 
-          <section class="footer-column">
-            <h2>Taking ed2go Courses</h2>
-            <ul>
+          <section class="footer-column footer-column--links">
+            <button class="footer-toggle" type="button" aria-expanded="true">
+              <span>Taking Ed2Go Courses</span>
+              <span class="footer-toggle__chevron"></span>
+            </button>
+            <ul class="footer-list">
               <li><a href="#">Financial Assistance</a></li>
               <li><a href="#">MyCAA</a></li>
-              <li><a href="#">Student Policies</a></li>
             </ul>
           </section>
 
           <section class="footer-column footer-column--connect">
-            <div>
-              <h2>Connect</h2>
-              <div class="social-links">
-                <a href="#" aria-label="Facebook">
-                  <img src="https://www.figma.com/api/mcp/asset/2838a302-9760-4dc7-ab01-6eebc437d427" alt="" />
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <img src="https://www.figma.com/api/mcp/asset/d04fd101-30b9-4b3f-921b-78ed8e1fdc0f" alt="" />
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <img src="https://www.figma.com/api/mcp/asset/9d8af5a5-2934-46cc-a17f-f1523b15eb4b" alt="" />
-                </a>
+            <button class="footer-toggle" type="button" aria-expanded="true">
+              <span>Resources</span>
+              <span class="footer-toggle__chevron"></span>
+            </button>
+            <div class="footer-panel">
+              <div class="footer-connect">
+                <h2>Connect</h2>
+                <div class="social-links">
+                  <a href="#" aria-label="Facebook">
+                    <img src="https://www.figma.com/api/mcp/asset/2838a302-9760-4dc7-ab01-6eebc437d427" alt="" />
+                  </a>
+                  <a href="#" aria-label="YouTube">
+                    <img src="https://www.figma.com/api/mcp/asset/d04fd101-30b9-4b3f-921b-78ed8e1fdc0f" alt="" />
+                  </a>
+                  <a href="#" aria-label="LinkedIn">
+                    <img src="https://www.figma.com/api/mcp/asset/9d8af5a5-2934-46cc-a17f-f1523b15eb4b" alt="" />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h2>Resources</h2>
-              <ul>
+
+              <ul class="footer-list">
                 <li><a href="#">About ed2go</a></li>
                 <li><a href="#">Find a School</a></li>
                 <li><a href="#">Help</a></li>
                 <li><a href="#">Careers</a></li>
+                <li><a href="#">Partner With Us</a></li>
                 <li><a href="#">Corporate Training</a></li>
+                <li><a href="#">Cybersecurity Training</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Teach With Us</a></li>
+                <li><a href="#">Advanced Career Training Student Agreement</a></li>
               </ul>
             </div>
           </section>
@@ -240,7 +237,7 @@
               src="https://www.figma.com/api/mcp/asset/f0a940d0-e747-4b8b-832d-214f158f6c1a"
               alt="ed2go"
             />
-            <ul>
+            <ul class="footer-list footer-list--legal">
               <li><a href="#">Cengage Learning</a></li>
               <li><a href="#">Copyright Notices</a></li>
               <li><a href="#">Terms of Use</a></li>
@@ -249,26 +246,30 @@
             </ul>
             <p class="legal-copy">
               © 2025 ed2go, a division of Cengage Learning. All rights reserved. The material on this site cannot be
-              reproduced or redistributed without prior written permission from Education To Go.
+              reproduced or redistributed unless you have obtained prior written permission from Education To Go.
+              Education To Go and ed2go are registered trademarks of Education To Go, a part of Cengage Learning.
             </p>
           </section>
         </div>
       </footer>
     </div>
 
+    <template id="tab-button-template">
+      <button class="tab-button" type="button"></button>
+    </template>
+
     <template id="course-card-template">
       <article class="course-card">
-        <div class="course-card__top">
+        <div class="course-card__header">
           <div class="course-card__title-block">
-            <div class="course-card__status-row">
-              <span class="course-card__status"></span>
-              <span class="course-card__badge"></span>
+            <div class="course-card__title-row">
+              <h3></h3>
+              <span class="course-card__tag"></span>
             </div>
-            <h3></h3>
             <a class="course-card__partner" href="#"></a>
           </div>
           <button class="progress-button" type="button">
-            <img src="https://www.figma.com/api/mcp/asset/acf05cb4-449e-45a6-a49a-c9699c04c830" alt="" />
+            <img src="https://www.figma.com/api/mcp/asset/e0158b07-5b6e-4a40-b32d-09112d60b8c2" alt="" />
             <span>Progress Tracker</span>
           </button>
         </div>
@@ -277,6 +278,7 @@
           <div class="course-card__image-wrap">
             <img class="course-card__image" alt="" />
           </div>
+
           <div class="course-card__meta">
             <div class="course-card__meta-item">
               <span>Access Dates</span>
@@ -286,25 +288,13 @@
               <span>Instructor</span>
               <strong class="course-card__instructor"></strong>
             </div>
-            <div class="course-card__meta-item course-card__progress-wrap">
-              <span>Progress</span>
-              <strong class="course-card__progress"></strong>
-            </div>
           </div>
         </div>
 
-        <div class="course-card__actions"></div>
-      </article>
-    </template>
-
-    <template id="task-item-template">
-      <li class="task-item">
-        <span class="task-item__marker" aria-hidden="true"></span>
-        <div>
-          <strong class="task-item__title"></strong>
-          <span class="task-item__meta"></span>
+        <div class="course-card__footer">
+          <div class="course-card__actions"></div>
         </div>
-      </li>
+      </article>
     </template>
 
     <script src="./script.js"></script>

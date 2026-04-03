@@ -1,107 +1,160 @@
-const currentCourses = [
+const tabs = [
   {
-    title: "Pharmacy Technician (Voucher Included)",
-    partner: "Blue Ridge Community College",
-    image: "https://www.figma.com/api/mcp/asset/5c03986c-23b8-425e-9e69-a51d6a1c0d00",
-    dates: "Oct 31, 2025 - Jul 31, 2026",
-    instructor: "Sharon Blackford",
-    progress: "Lesson 6 of 12",
-    status: "In progress",
-    badge: "Lab track",
-    actions: [
-      { label: "Launch", icon: "https://www.figma.com/api/mcp/asset/a7b1f247-e0a8-49bc-bb01-990708b47999", primary: true },
-      { label: "Log My Time", icon: "https://www.figma.com/api/mcp/asset/bd83a824-8a00-4c9f-9936-01a63a5eda33" },
-      { label: "Report", icon: "https://www.figma.com/api/mcp/asset/c99aa6a4-9988-478f-820e-ad5c5e809b48" },
-      { label: "Completion", icon: "https://www.figma.com/api/mcp/asset/48849eff-4985-4151-8004-f0f2912d8cf7" },
-      { label: "Course Support", icon: "https://www.figma.com/api/mcp/asset/27be01aa-adb6-4fda-b2dd-248ad86c62b9" }
-    ]
+    id: "current",
+    label: "Current",
+    heading: "Current Courses"
   },
   {
-    title: "Start a Pet Sitting Business",
-    partner: "",
-    image: "https://www.figma.com/api/mcp/asset/39248732-9663-4ee6-af42-b5d34f31f5ae",
-    dates: "Dec 23, 2025 - Mar 23, 2026",
-    instructor: "",
-    progress: "Ready to launch",
-    status: "New",
-    badge: "",
-    actions: [
-      { label: "Launch", icon: "https://www.figma.com/api/mcp/asset/a7b1f247-e0a8-49bc-bb01-990708b47999", primary: true },
-      { label: "Report", icon: "https://www.figma.com/api/mcp/asset/c99aa6a4-9988-478f-820e-ad5c5e809b48" },
-      { label: "Completion", icon: "https://www.figma.com/api/mcp/asset/48849eff-4985-4151-8004-f0f2912d8cf7" },
-      { label: "Course Support", icon: "https://www.figma.com/api/mcp/asset/27be01aa-adb6-4fda-b2dd-248ad86c62b9" }
-    ]
+    id: "upcoming",
+    label: "Upcoming",
+    heading: "Upcoming Courses",
+    empty: {
+      title: "You do not have any upcoming courses.",
+      body: "Courses scheduled to begin soon will appear in this section."
+    }
+  },
+  {
+    id: "previous",
+    label: "Previous",
+    heading: "Previous Courses",
+    empty: {
+      title: "You do not have any previous courses.",
+      body: "Once your access expires, courses will move to this section."
+    }
   }
 ];
+
+const coursesByTab = {
+  current: [
+    {
+      title: "Pharmacy Technician (Voucher Included)",
+      partner: "Blue Ridge Community College",
+      image: "https://www.figma.com/api/mcp/asset/15d63a08-7eba-4123-98d6-2b320436cddc",
+      dates: "Oct 31 2025 - Jul 31 2026",
+      instructor: "Sharon Blackford",
+      showProgress: true,
+      actions: [
+        {
+          label: "Launch",
+          icon: "https://www.figma.com/api/mcp/asset/c30e605e-b85b-4459-9bc2-b79012dd69e0",
+          tone: "primary"
+        },
+        {
+          label: "Log My Time",
+          icon: "https://www.figma.com/api/mcp/asset/02d05319-ebdf-40c4-9a3b-66738981bf3a",
+          tone: "soft"
+        },
+        {
+          label: "Course Support",
+          icon: "https://www.figma.com/api/mcp/asset/708199da-78c0-40fc-995b-d1aad870d9e1"
+        }
+      ]
+    },
+    {
+      title: "Start a Pet Sitting Business",
+      partner: "",
+      image: "https://www.figma.com/api/mcp/asset/39248732-9663-4ee6-af42-b5d34f31f5ae",
+      dates: "Dec 23 2025 - Mar 23 2026",
+      instructor: "",
+      showProgress: false,
+      actions: [
+        {
+          label: "Launch",
+          icon: "https://www.figma.com/api/mcp/asset/c30e605e-b85b-4459-9bc2-b79012dd69e0",
+          tone: "primary"
+        },
+        {
+          label: "Report",
+          icon: "https://www.figma.com/api/mcp/asset/ceeb32f8-e75a-45b2-9267-03366f08c969"
+        },
+        {
+          label: "Course Support",
+          icon: "https://www.figma.com/api/mcp/asset/708199da-78c0-40fc-995b-d1aad870d9e1"
+        }
+      ]
+    }
+  ],
+  upcoming: [],
+  previous: []
+};
 
 const resourceCourses = [
   {
     title: "Get Career Ready",
     partner: "",
-    image: "https://www.figma.com/api/mcp/asset/61384465-53f9-4c7e-abd0-1435c5772a16",
-    dates: "Oct 31, 2025 - Jul 31, 2026",
+    image: "https://www.figma.com/api/mcp/asset/a6f08a8d-6d69-4938-a16e-8cb59e759216",
+    dates: "Oct 31 2025 - Jul 31 2026",
     instructor: "",
-    progress: "Optional resource",
-    status: "Available",
-    badge: "Optional",
+    showProgress: false,
+    tag: "Optional",
+    isResource: true,
     actions: [
-      { label: "Launch", icon: "https://www.figma.com/api/mcp/asset/a7b1f247-e0a8-49bc-bb01-990708b47999", primary: true },
-      { label: "Report", icon: "https://www.figma.com/api/mcp/asset/c99aa6a4-9988-478f-820e-ad5c5e809b48" },
-      { label: "Completion", icon: "https://www.figma.com/api/mcp/asset/48849eff-4985-4151-8004-f0f2912d8cf7" },
-      { label: "Course Support", icon: "https://www.figma.com/api/mcp/asset/27be01aa-adb6-4fda-b2dd-248ad86c62b9" }
+      {
+        label: "Launch",
+        icon: "https://www.figma.com/api/mcp/asset/2c351c1b-f03a-40d4-894a-3e348b9ff8fe",
+        tone: "primary"
+      },
+      {
+        label: "Report",
+        icon: "https://www.figma.com/api/mcp/asset/28316123-6188-442f-9570-71a5d7c94d00"
+      },
+      {
+        label: "Course Support",
+        icon: "https://www.figma.com/api/mcp/asset/ceeb32f8-e75a-45b2-9267-03366f08c969"
+      }
     ]
   }
 ];
 
-const weeklyTasks = [
-  {
-    title: "Complete dosage calculations review",
-    meta: "Pharmacy Technician · Due Thursday"
-  },
-  {
-    title: "Submit your lab hours",
-    meta: "Clinical support · Due Friday"
-  },
-  {
-    title: "Open the Get Career Ready resource",
-    meta: "Optional activity · 20 min"
-  }
-];
+let activeTab = "current";
 
 function createActionButton(action) {
   const button = document.createElement("button");
-  button.className = `action-button${action.primary ? " action-button--primary" : ""}`;
+  button.className = "action-button";
+
+  if (action.tone === "primary") {
+    button.classList.add("action-button--primary");
+  }
+
+  if (action.tone === "soft") {
+    button.classList.add("action-button--soft");
+  }
+
   button.type = "button";
   button.innerHTML = `
     <img src="${action.icon}" alt="" />
     <span>${action.label}</span>
   `;
+
   return button;
 }
 
-function renderCourseCard(course, container) {
+function createCourseCard(course) {
   const template = document.getElementById("course-card-template");
-  if (!(template instanceof HTMLTemplateElement) || !(container instanceof HTMLElement)) {
-    return;
+
+  if (!(template instanceof HTMLTemplateElement)) {
+    return null;
   }
 
   const fragment = template.content.cloneNode(true);
   const card = fragment.querySelector(".course-card");
+  const title = fragment.querySelector("h3");
+  const partner = fragment.querySelector(".course-card__partner");
+  const tag = fragment.querySelector(".course-card__tag");
+  const progressButton = fragment.querySelector(".progress-button");
+  const image = fragment.querySelector(".course-card__image");
+  const dates = fragment.querySelector(".course-card__dates");
+  const instructor = fragment.querySelector(".course-card__instructor");
+  const instructorWrap = fragment.querySelector(".course-card__instructor-wrap");
+  const actions = fragment.querySelector(".course-card__actions");
+
   if (!(card instanceof HTMLElement)) {
-    return;
+    return null;
   }
 
-  const title = card.querySelector("h3");
-  const partner = card.querySelector(".course-card__partner");
-  const image = card.querySelector(".course-card__image");
-  const dates = card.querySelector(".course-card__dates");
-  const instructor = card.querySelector(".course-card__instructor");
-  const progress = card.querySelector(".course-card__progress");
-  const status = card.querySelector(".course-card__status");
-  const badge = card.querySelector(".course-card__badge");
-  const instructorWrap = card.querySelector(".course-card__instructor-wrap");
-  const progressWrap = card.querySelector(".course-card__progress-wrap");
-  const actions = card.querySelector(".course-card__actions");
+  if (course.isResource) {
+    card.classList.add("course-card--resource");
+  }
 
   if (title instanceof HTMLElement) {
     title.textContent = course.title;
@@ -115,6 +168,14 @@ function renderCourseCard(course, container) {
     }
   }
 
+  if (tag instanceof HTMLElement) {
+    tag.textContent = course.tag ?? "";
+  }
+
+  if (progressButton instanceof HTMLElement && !course.showProgress) {
+    progressButton.remove();
+  }
+
   if (image instanceof HTMLImageElement) {
     image.src = course.image;
     image.alt = course.title;
@@ -122,14 +183,6 @@ function renderCourseCard(course, container) {
 
   if (dates instanceof HTMLElement) {
     dates.textContent = course.dates;
-  }
-
-  if (status instanceof HTMLElement) {
-    status.textContent = course.status;
-  }
-
-  if (badge instanceof HTMLElement) {
-    badge.textContent = course.badge ?? "";
   }
 
   if (instructor instanceof HTMLElement && instructorWrap instanceof HTMLElement) {
@@ -140,63 +193,183 @@ function renderCourseCard(course, container) {
     }
   }
 
-  if (progress instanceof HTMLElement && progressWrap instanceof HTMLElement) {
-    if (course.progress) {
-      progress.textContent = course.progress;
-    } else {
-      progressWrap.classList.add("is-hidden");
-    }
-  }
-
   if (actions instanceof HTMLElement) {
-    course.actions.forEach((action) => {
-      actions.appendChild(createActionButton(action));
-    });
+    course.actions.forEach((action) => actions.appendChild(createActionButton(action)));
   }
 
-  container.appendChild(fragment);
+  return fragment;
 }
 
-function renderSection(courses, containerId) {
+function renderTabs(containerId) {
   const container = document.getElementById(containerId);
-  if (!(container instanceof HTMLElement)) {
+  const template = document.getElementById("tab-button-template");
+
+  if (!(container instanceof HTMLElement) || !(template instanceof HTMLTemplateElement)) {
     return;
   }
 
-  courses.forEach((course) => renderCourseCard(course, container));
-}
+  container.innerHTML = "";
 
-function renderTasks(tasks, containerId) {
-  const template = document.getElementById("task-item-template");
-  const container = document.getElementById(containerId);
-  if (!(template instanceof HTMLTemplateElement) || !(container instanceof HTMLElement)) {
-    return;
-  }
-
-  tasks.forEach((task) => {
+  tabs.forEach((tab) => {
     const fragment = template.content.cloneNode(true);
-    const title = fragment.querySelector(".task-item__title");
-    const meta = fragment.querySelector(".task-item__meta");
+    const button = fragment.querySelector(".tab-button");
 
-    if (title instanceof HTMLElement) {
-      title.textContent = task.title;
+    if (!(button instanceof HTMLButtonElement)) {
+      return;
     }
 
-    if (meta instanceof HTMLElement) {
-      meta.textContent = task.meta;
-    }
+    button.textContent = tab.label;
+    button.dataset.tab = tab.id;
+    button.classList.toggle("is-active", tab.id === activeTab);
+    button.setAttribute("aria-pressed", String(tab.id === activeTab));
+    button.addEventListener("click", () => {
+      activeTab = tab.id;
+      renderView();
+    });
 
     container.appendChild(fragment);
   });
 }
 
-const mobileMenuButton = document.getElementById("mobile-menu-button");
+function renderCourses() {
+  const list = document.getElementById("course-list");
+  const sectionTitle = document.getElementById("course-section-title");
+  const emptyState = document.getElementById("empty-state");
+  const emptyTitle = document.getElementById("empty-state-title");
+  const emptyBody = document.getElementById("empty-state-body");
+  const currentTab = tabs.find((tab) => tab.id === activeTab);
+  const courses = coursesByTab[activeTab] ?? [];
 
-mobileMenuButton?.addEventListener("click", () => {
-  const isOpen = document.body.classList.toggle("nav-open");
-  mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
-});
+  if (
+    !(list instanceof HTMLElement) ||
+    !(sectionTitle instanceof HTMLElement) ||
+    !(emptyState instanceof HTMLElement) ||
+    !(emptyTitle instanceof HTMLElement) ||
+    !(emptyBody instanceof HTMLElement) ||
+    !currentTab
+  ) {
+    return;
+  }
 
-renderSection(currentCourses, "current-courses");
-renderSection(resourceCourses, "resource-courses");
-renderTasks(weeklyTasks, "task-list");
+  sectionTitle.textContent = currentTab.heading;
+  list.innerHTML = "";
+
+  if (courses.length > 0) {
+    courses.forEach((course) => {
+      const card = createCourseCard(course);
+
+      if (card) {
+        list.appendChild(card);
+      }
+    });
+
+    emptyState.hidden = true;
+    return;
+  }
+
+  emptyTitle.textContent = currentTab.empty?.title ?? "No courses found.";
+  emptyBody.textContent = currentTab.empty?.body ?? "";
+  emptyState.hidden = false;
+}
+
+function renderResourceCourses() {
+  const list = document.getElementById("resource-courses");
+
+  if (!(list instanceof HTMLElement)) {
+    return;
+  }
+
+  list.innerHTML = "";
+  resourceCourses.forEach((course) => {
+    const card = createCourseCard(course);
+
+    if (card) {
+      list.appendChild(card);
+    }
+  });
+}
+
+function renderView() {
+  const resourcesSection = document.getElementById("resources-section");
+
+  renderTabs("desktop-tab-nav");
+  renderTabs("mobile-tab-nav");
+  renderCourses();
+
+  if (resourcesSection instanceof HTMLElement) {
+    resourcesSection.hidden = activeTab !== "current";
+  }
+}
+
+function setupMobileMenu() {
+  const menuButton = document.getElementById("mobile-menu-button");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  if (!(menuButton instanceof HTMLButtonElement) || !(mobileNav instanceof HTMLElement)) {
+    return;
+  }
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    const nextState = !isOpen;
+
+    menuButton.setAttribute("aria-expanded", String(nextState));
+    mobileNav.hidden = !nextState;
+    mobileNav.classList.toggle("is-open", nextState);
+  });
+}
+
+function setupFooterAccordions() {
+  const mediaQuery = window.matchMedia("(max-width: 767px)");
+  const footerColumns = Array.from(document.querySelectorAll(".footer-column"));
+
+  footerColumns.forEach((column, index) => {
+    const toggle = column.querySelector(".footer-toggle");
+
+    if (!(toggle instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    toggle.addEventListener("click", () => {
+      if (!mediaQuery.matches || column.classList.contains("footer-column--legal")) {
+        return;
+      }
+
+      const isOpen = column.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    if (index < 3) {
+      column.classList.add("is-open");
+    }
+  });
+
+  function syncFooterState() {
+    footerColumns.forEach((column, index) => {
+      const toggle = column.querySelector(".footer-toggle");
+
+      if (!(toggle instanceof HTMLButtonElement) || column.classList.contains("footer-column--legal")) {
+        return;
+      }
+
+      if (mediaQuery.matches) {
+        if (!column.classList.contains("is-open") && index < 3) {
+          column.classList.add("is-open");
+        }
+
+        toggle.setAttribute("aria-expanded", String(column.classList.contains("is-open")));
+      } else {
+        column.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+    });
+  }
+
+  syncFooterState();
+  mediaQuery.addEventListener("change", syncFooterState);
+}
+
+renderResourceCourses();
+renderView();
+setupMobileMenu();
+setupFooterAccordions();
