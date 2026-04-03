@@ -3,262 +3,309 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Chatbot Course Player</title>
+    <title>Student Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <header class="topbar">
-        <div class="topbar-actions">
-          <button class="icon-button" type="button" aria-label="Search">
-            <img src="https://www.figma.com/api/mcp/asset/f53117d7-e670-47a1-ad56-b12016efd22a" alt="" />
-          </button>
-          <span class="topbar-separator" aria-hidden="true"></span>
-          <button class="icon-button" type="button" aria-label="Help">
-            <img src="https://www.figma.com/api/mcp/asset/60fe8699-33fa-44a0-a224-0f36a150d151" alt="" />
-          </button>
-          <span class="topbar-separator" aria-hidden="true"></span>
-          <button class="text-icon-button" type="button" aria-label="Messages">
-            <img src="https://www.figma.com/api/mcp/asset/7b748038-68be-460b-9660-16bd4b38e335" alt="" />
-            <span>Messages</span>
-          </button>
-          <span class="topbar-separator" aria-hidden="true"></span>
-          <button class="text-icon-button" type="button" aria-label="User menu">
-            <img src="https://www.figma.com/api/mcp/asset/95fef4c1-97b6-4032-a8d3-4ddcbe28d978" alt="" />
-            <span>Jane Krishnaswarmy</span>
-            <img src="https://www.figma.com/api/mcp/asset/462fb9e3-50d1-4e18-bc2f-b0c30adf6512" alt="" />
+    <div class="student-center">
+      <header class="portal-header">
+        <div class="portal-header__inner">
+          <div class="portal-header__brand">
+            <a class="portal-header__logo-link" href="#" aria-label="ed2go home">
+              <img
+                class="portal-header__logo"
+                src="https://www.figma.com/api/mcp/asset/b97892b4-b3dd-45b7-8d1e-e6ac0956cc5b"
+                alt="ed2go"
+              />
+            </a>
+            <nav class="portal-header__nav" aria-label="Primary">
+              <button class="nav-link" type="button">
+                <span>Explore Courses</span>
+                <img src="https://www.figma.com/api/mcp/asset/f12a9b90-a617-45b9-ba0f-1dcc7021d175" alt="" />
+              </button>
+              <button class="nav-link" type="button">
+                <span>Resources</span>
+                <img src="https://www.figma.com/api/mcp/asset/f12a9b90-a617-45b9-ba0f-1dcc7021d175" alt="" />
+              </button>
+              <button class="nav-link" type="button">
+                <span>Achievements</span>
+              </button>
+            </nav>
+          </div>
+
+          <div class="portal-header__actions">
+            <button class="nav-link" type="button">
+              <span>Account</span>
+              <img src="https://www.figma.com/api/mcp/asset/f12a9b90-a617-45b9-ba0f-1dcc7021d175" alt="" />
+            </button>
+            <button class="icon-button" type="button" aria-label="Search">
+              <img src="https://www.figma.com/api/mcp/asset/1b762ca5-ec3b-41a9-97a7-9e6a3355e3e3" alt="" />
+            </button>
+            <div class="contact-block">
+              <span>Contact Us</span>
+              <a href="tel:8664415454">866-441-5454</a>
+            </div>
+          </div>
+
+          <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-expanded="false">
+            Menu
           </button>
         </div>
       </header>
 
-      <main class="page-content">
-        <aside class="course-nav" id="course-nav">
-          <nav class="course-nav-primary" aria-label="Primary">
-            <a class="nav-row" href="#">
-              <span class="nav-row-main">
-                <img src="https://www.figma.com/api/mcp/asset/06a48f3e-62b4-4e42-b3ec-f131a525fee7" alt="" />
-                <span>Home</span>
-              </span>
-            </a>
-            <a class="nav-row" href="#">
-              <span class="nav-row-main">
-                <img src="https://www.figma.com/api/mcp/asset/9d8fe95d-9a7c-45be-834a-630a3a4dfc11" alt="" />
-                <span>Scores</span>
-              </span>
-            </a>
-            <a class="nav-row" href="#">
-              <span class="nav-row-main">
-                <img src="https://www.figma.com/api/mcp/asset/e3825c0f-f712-4a6f-8e09-33aece3072c2" alt="" />
-                <span>Discussions</span>
-              </span>
-            </a>
-            <a class="nav-row nav-row-text-only" href="#">
-              <span class="nav-row-main">
-                <span>Getting Started</span>
-              </span>
-            </a>
-          </nav>
+      <main class="page-shell">
+        <aside class="side-rail" id="side-rail">
+          <section class="rail-card rail-card--menu">
+            <h2>Your Courses</h2>
+            <nav aria-label="Course status">
+              <a class="status-link is-active" href="#">Current</a>
+              <a class="status-link" href="#">Upcoming</a>
+              <a class="status-link" href="#">Previous</a>
+            </nav>
+          </section>
 
-          <section class="lesson-nav">
-            <button class="lesson-row lesson-row-active" type="button">
-              <span>Lesson 1: Orientation to Pharmacy</span>
-              <span class="progress progress-early" aria-hidden="true"></span>
-            </button>
+          <section class="rail-card">
+            <h2>Career Resources</h2>
+            <p>Access tools and guidance to help you prepare for your next role.</p>
+            <a class="rail-link" href="#">
+              <img src="https://www.figma.com/api/mcp/asset/96eba875-2257-49d7-9d21-e334592a2892" alt="" />
+              <span>Virtual Career Center</span>
+            </a>
+          </section>
 
-            <div class="lesson-subnav">
-              <a class="subnav-row is-current" href="#">Reading Material</a>
-              <a class="subnav-row" href="#">Lesson 1 Reading Assignment</a>
-              <a class="subnav-row" href="#">Program Overview</a>
-              <a class="subnav-row" href="#">Learning Objectives</a>
-              <a class="subnav-row" href="#">Getting Started</a>
-              <a class="subnav-row" href="#">Chapter 1: The History of Pharmacology</a>
-              <a class="subnav-row" href="#">
-                Chapter 2: Pharmacy Technician Organizations, Exams, and Competencies
-              </a>
-              <a class="subnav-row" href="#">Chapter 3: Pharmacy Reference Materials</a>
-              <a class="subnav-row" href="#">Chapter 4: Pharmacy Terminology</a>
-              <a class="subnav-row" href="#">Chapter 5: Body and Organ Systems Terminology</a>
-              <a class="subnav-row" href="#">Lesson 2: Pharmacy Law &amp; Ethics</a>
-              <a class="subnav-row" href="#">Lesson 3: Pharmaceutical Calculations</a>
-              <a class="subnav-row" href="#">Lesson 4: Pharmacology I: Basics</a>
+          <section class="rail-card">
+            <h2>Get Support</h2>
+            <p>Need help with your coursework or platform access? We’re here for you.</p>
+            <div class="support-line">
+              <span>Call Us:</span>
+              <a href="tel:8664415454">1-866-441-5454</a>
             </div>
+          </section>
+
+          <section class="rail-card rail-card--accent">
+            <h2>Student Checklist</h2>
+            <ul class="mini-list">
+              <li>Review new announcements</li>
+              <li>Launch your current course</li>
+              <li>Log lab hours before Friday</li>
+            </ul>
           </section>
         </aside>
 
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="true" aria-controls="course-nav">
-          <img src="https://www.figma.com/api/mcp/asset/5d75a825-ba45-4eb4-82f8-11c1365b694c" alt="" />
-        </button>
+        <section class="main-content">
+          <header class="hero-banner">
+            <div class="hero-copy">
+              <p class="eyebrow">Welcome back, Jane</p>
+              <h1>Student Center</h1>
+              <p class="hero-description">
+                Track active courses, pick up optional resources, and find the support you need in one place.
+              </p>
+            </div>
 
-        <section class="lesson-stage">
-          <div class="lesson-card">
-            <div class="lesson-card-inner">
-              <header class="lesson-header">
-                <div class="lesson-header-left">
-                  <button class="course-icon-button" type="button" aria-label="Back">
-                    <img src="https://www.figma.com/api/mcp/asset/8c7bab65-e28d-4c69-b034-fc6c3b507d4d" alt="" />
-                  </button>
-                  <button class="course-icon-button" type="button" aria-label="Bookmark">
-                    <img src="https://www.figma.com/api/mcp/asset/cf0b9a71-8fa1-41c3-89a5-cd1d4c807ba1" alt="" />
-                  </button>
-                </div>
-
-                <div class="lesson-title-block">
-                  <p class="course-name">1ph-1-Pharmacy Technician v.4 - FINAL (live 1ph-8)</p>
-                  <p class="course-subtitle">Lesson 1: Orientation to PharmacyReading Material</p>
-                  <h1>Program Overview</h1>
-                </div>
-
-                <div class="lesson-header-right">
-                  <button class="course-icon-button badge-button" type="button" aria-label="Questions">
-                    <img src="https://www.figma.com/api/mcp/asset/be74b422-df92-4839-96a7-b7532a81304e" alt="" />
-                    <span class="badge-dot" aria-hidden="true"></span>
-                  </button>
-                  <button class="course-icon-button" type="button" aria-label="Print">
-                    <img src="https://www.figma.com/api/mcp/asset/844e675a-0b95-466b-af00-d97ffcd765c4" alt="" />
-                  </button>
-                  <button class="course-icon-button" type="button" aria-label="Expand">
-                    <img src="https://www.figma.com/api/mcp/asset/d2398ee7-79e9-44f8-bdfc-54c19006e54e" alt="" />
-                  </button>
-                </div>
-              </header>
-
-              <article class="lesson-article">
-                <section class="content-block">
-                  <h2>Program Overview</h2>
-                  <p>
-                    Welcome to your first lesson of the Pharmacy Technician program! You probably have a lot of
-                    questions. How did the world of pharmacy start? What exactly is a pharmacy technician? What does a
-                    pharmacy technician do? You'll find the answers to these questions in this lesson.
-                  </p>
-                  <p>
-                    But first, let's go over what you'll learn in the program as a whole. After successfully
-                    completing this program, you'll be ready to take the Certified Pharmacy Technician certification
-                    exam and begin your career as a CPhT (Certified Pharmacy Technician).
-                  </p>
-                  <p>Here's an overview of the topics you'll be studying in this program:</p>
-                </section>
-
-                <section class="content-block content-block-list">
-                  <div class="seal-wrap">
-                    <img
-                      src="https://www.figma.com/api/mcp/asset/31923e3d-859f-4ec4-a9ab-1589626d578b"
-                      alt="CPhT certification seal"
-                    />
-                  </div>
-                  <ul>
-                    <li>Pharmacy laws and ethics</li>
-                    <li>Pharmaceutical calculations</li>
-                    <li>Prescriptions, labels, and errors</li>
-                    <li>Pharmacology - basics and specific populations</li>
-                    <li>Pharmacology - neurological body systems</li>
-                    <li>Pharmacology - muscles, heart, and lungs body systems</li>
-                    <li>Pharmacology - multi-body systems</li>
-                    <li>Communications and billing</li>
-                  </ul>
-                </section>
-
-                <section class="content-block">
-                  <p>
-                    You'll also have two hands-on lab components in this program: one for retail practice, and one for
-                    hospital practice.
-                  </p>
-                  <div class="wide-image">
-                    <img
-                      src="https://www.figma.com/api/mcp/asset/a405bfe9-6b08-4cfe-91cb-30aa548ad541"
-                      alt="Students participating in lab discussion"
-                    />
-                  </div>
-                  <p>
-                    All right, ready to get started? On the next page we'll begin by looking at the learning
-                    objectives for our first lesson.
-                  </p>
-                </section>
+            <div class="hero-stats" aria-label="Student summary">
+              <article class="stat-card">
+                <span class="stat-card__label">Active Courses</span>
+                <strong class="stat-card__value">2</strong>
               </article>
-
-              <section class="activity-complete" aria-label="Activity complete">
-                <div class="activity-icon">
-                  <img src="https://www.figma.com/api/mcp/asset/1d23e7b1-b25c-4b89-b003-373a554908f3" alt="" />
-                </div>
-                <div class="activity-copy">
-                  <p>Activity Complete</p>
-                  <button class="inline-link" type="button">Undo</button>
-                </div>
-              </section>
-
-              <section class="next-up" aria-label="Next lesson">
-                <div class="next-up-label">Next Up</div>
-                <div class="next-up-body">
-                  <a href="#">Learning Objectives</a>
-                  <span>activity</span>
-                </div>
-              </section>
-
-              <footer class="page-footer">
-                <p>Student Support</p>
-                <p>&copy; 2025 Cengage Learning, Inc. All Rights Reserved</p>
-              </footer>
+              <article class="stat-card">
+                <span class="stat-card__label">Upcoming Tasks</span>
+                <strong class="stat-card__value">5</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-card__label">Support Rating</span>
+                <strong class="stat-card__value">24/7</strong>
+              </article>
             </div>
-          </div>
-        </section>
-
-        <aside class="assistant-panel" id="assistant-panel">
-          <header class="assistant-header">
-            <div class="assistant-title">
-              <img src="https://www.figma.com/api/mcp/asset/adc5e901-b924-4689-8cf5-7c4d9e98bd71" alt="" />
-              <span>Learning Assistant</span>
-            </div>
-            <button class="assistant-close" id="assistant-close" type="button" aria-label="Close assistant">
-              <img src="https://www.figma.com/api/mcp/asset/d0ee7c5b-ddcf-4b8c-9d03-f71b7018f8c1" alt="" />
-            </button>
           </header>
 
-          <div class="assistant-body">
-            <section class="assistant-response">
-              <p>
-                Hi! I'm your Learning Assistant. I'm here to help you with lessons, support your study, and answer
-                program questions.
-              </p>
-              <p>How can I help you today?</p>
-            </section>
-
-            <section class="assistant-prompts">
-              <p class="assistant-prompts-label">Try one of these:</p>
-              <div class="prompt-list">
-                <button class="prompt-chip" type="button" data-prompt="How do I get my textbooks?">
-                  <span>How do I get my textbooks?</span>
-                </button>
-                <button class="prompt-chip" type="button" data-prompt="Could you explain a concept for me?">
-                  <span>Could you explain a concept for me?</span>
-                </button>
-                <button
-                  class="prompt-chip"
-                  type="button"
-                  data-prompt="Can you help me with an issue related to my assignment?"
-                >
-                  <span>Can you help me with an issue related to my assignment?</span>
-                </button>
-              </div>
-            </section>
-          </div>
-
-          <form class="assistant-input-wrap">
-            <label class="sr-only" for="assistant-input">Ask the learning assistant a question</label>
-            <div class="assistant-input">
-              <textarea id="assistant-input" rows="2" placeholder="Ask me anything..."></textarea>
-              <button class="send-button" type="submit" aria-label="Send message" disabled>
-                <img src="https://www.figma.com/api/mcp/asset/84e2ee84-8119-40fe-a6f2-36ccf571acdf" alt="" />
-              </button>
+          <section class="announcement-strip" aria-label="Important updates">
+            <div>
+              <p class="announcement-strip__eyebrow">Important</p>
+              <p class="announcement-strip__text">Your Pharmacy Technician progress review opens April 8.</p>
             </div>
-          </form>
-        </aside>
+            <a href="#">View details</a>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading">
+              <div>
+                <p class="section-kicker">Current learning</p>
+                <h2>Current Courses</h2>
+              </div>
+              <a href="#">View all courses</a>
+            </div>
+            <div class="course-list" id="current-courses"></div>
+          </section>
+
+          <section class="feature-grid" aria-label="Quick access">
+            <article class="info-panel">
+              <p class="section-kicker">Support</p>
+              <h2>Need help staying on track?</h2>
+              <p>
+                Reach your instructor, review billing support, or find answers to common questions without leaving the
+                Student Center.
+              </p>
+              <div class="pill-row">
+                <span class="pill">Instructor access</span>
+                <span class="pill">Billing help</span>
+                <span class="pill">Course support</span>
+              </div>
+            </article>
+
+            <article class="info-panel info-panel--soft">
+              <p class="section-kicker">This week</p>
+              <h2>Student to-dos</h2>
+              <ul class="task-list" id="task-list"></ul>
+            </article>
+          </section>
+
+          <section class="section-block resources-section">
+            <div class="section-heading">
+              <div>
+                <p class="section-kicker">Optional extras</p>
+                <h2>Additional Resources</h2>
+              </div>
+              <a href="#">Browse all resources</a>
+            </div>
+            <p class="section-description">
+              Courses come with additional resources to supplement your learning. Start these whenever you’re ready.
+            </p>
+            <div class="course-list" id="resource-courses"></div>
+          </section>
+        </section>
       </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <section class="footer-column">
+            <h2>Popular Courses</h2>
+            <ul>
+              <li><a href="#">Accounting and Finance</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Computer Applications</a></li>
+              <li><a href="#">Design and Composition</a></li>
+              <li><a href="#">Healthcare and Medical</a></li>
+              <li><a href="#">Information Technology</a></li>
+              <li><a href="#">Teacher Professional Development</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h2>Taking ed2go Courses</h2>
+            <ul>
+              <li><a href="#">Financial Assistance</a></li>
+              <li><a href="#">MyCAA</a></li>
+              <li><a href="#">Student Policies</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column footer-column--connect">
+            <div>
+              <h2>Connect</h2>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook">
+                  <img src="https://www.figma.com/api/mcp/asset/2838a302-9760-4dc7-ab01-6eebc437d427" alt="" />
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <img src="https://www.figma.com/api/mcp/asset/d04fd101-30b9-4b3f-921b-78ed8e1fdc0f" alt="" />
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <img src="https://www.figma.com/api/mcp/asset/9d8af5a5-2934-46cc-a17f-f1523b15eb4b" alt="" />
+                </a>
+              </div>
+            </div>
+            <div>
+              <h2>Resources</h2>
+              <ul>
+                <li><a href="#">About ed2go</a></li>
+                <li><a href="#">Find a School</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Corporate Training</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Teach With Us</a></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="footer-column footer-column--legal">
+            <img
+              class="footer-logo"
+              src="https://www.figma.com/api/mcp/asset/f0a940d0-e747-4b8b-832d-214f158f6c1a"
+              alt="ed2go"
+            />
+            <ul>
+              <li><a href="#">Cengage Learning</a></li>
+              <li><a href="#">Copyright Notices</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Statement</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+            <p class="legal-copy">
+              © 2025 ed2go, a division of Cengage Learning. All rights reserved. The material on this site cannot be
+              reproduced or redistributed without prior written permission from Education To Go.
+            </p>
+          </section>
+        </div>
+      </footer>
     </div>
+
+    <template id="course-card-template">
+      <article class="course-card">
+        <div class="course-card__top">
+          <div class="course-card__title-block">
+            <div class="course-card__status-row">
+              <span class="course-card__status"></span>
+              <span class="course-card__badge"></span>
+            </div>
+            <h3></h3>
+            <a class="course-card__partner" href="#"></a>
+          </div>
+          <button class="progress-button" type="button">
+            <img src="https://www.figma.com/api/mcp/asset/acf05cb4-449e-45a6-a49a-c9699c04c830" alt="" />
+            <span>Progress Tracker</span>
+          </button>
+        </div>
+
+        <div class="course-card__content">
+          <div class="course-card__image-wrap">
+            <img class="course-card__image" alt="" />
+          </div>
+          <div class="course-card__meta">
+            <div class="course-card__meta-item">
+              <span>Access Dates</span>
+              <strong class="course-card__dates"></strong>
+            </div>
+            <div class="course-card__meta-item course-card__instructor-wrap">
+              <span>Instructor</span>
+              <strong class="course-card__instructor"></strong>
+            </div>
+            <div class="course-card__meta-item course-card__progress-wrap">
+              <span>Progress</span>
+              <strong class="course-card__progress"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card__actions"></div>
+      </article>
+    </template>
+
+    <template id="task-item-template">
+      <li class="task-item">
+        <span class="task-item__marker" aria-hidden="true"></span>
+        <div>
+          <strong class="task-item__title"></strong>
+          <span class="task-item__meta"></span>
+        </div>
+      </li>
+    </template>
 
     <script src="./script.js"></script>
   </body>
