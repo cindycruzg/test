@@ -69,8 +69,6 @@ img {
 .portal-header {
   background: var(--surface);
   border-bottom: 1px solid var(--gray-50);
-  position: sticky;
-  top: 0;
   z-index: 20;
 }
 
@@ -486,13 +484,13 @@ img {
 
 .course-card__footer {
   border-top: 1px solid var(--gray-200);
-  padding-bottom: 24px;
+  margin: 0 24px 24px;
+  padding-bottom: 0;
   padding-top: 16px;
 }
 
 .course-card--resource .course-card__footer {
   border-top: 1px solid var(--gray-200);
-  margin: 0 24px 24px;
   padding: 16px 0 0;
 }
 
@@ -734,6 +732,11 @@ img {
     min-width: 200px;
   }
 
+  .course-card__footer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .site-footer__inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-left: 36px;
@@ -858,6 +861,11 @@ img {
 
   .course-card__actions {
     gap: 10px;
+  }
+
+  .course-card__footer {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   .action-button,
