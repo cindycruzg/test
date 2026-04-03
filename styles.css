@@ -81,7 +81,7 @@ img {
   margin: 0 auto;
   max-width: 1440px;
   min-height: 69px;
-  padding: 0 120px;
+  padding: 0 136px;
 }
 
 .portal-header__left,
@@ -116,19 +116,28 @@ img {
   padding: 4px 0;
 }
 
-.nav-link span {
+.nav-link__label {
   font-family: var(--font-heading);
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
 }
 
-.nav-link img {
+.nav-link__caret {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 20px;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.nav-link__caret img {
   height: 5px;
-  padding: 7.5px 5px;
+  padding: 0;
   width: 10px;
 }
 
-.nav-link img,
 .icon-button img,
 .cta-link__icon img,
 .progress-button img,
@@ -195,12 +204,18 @@ img {
 }
 
 .rail-card h2,
-.section-heading h2,
-.page-heading h1,
 .course-card__title-block h3,
 .empty-state h3 {
   color: var(--gray-700);
   font-family: var(--font-heading);
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.section-heading h2,
+.page-heading h1 {
+  color: var(--gray-700);
+  font-family: var(--font-body);
   letter-spacing: 0;
   margin: 0;
 }
@@ -291,10 +306,9 @@ img {
 }
 
 .page-heading h1 {
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 600;
-  line-height: 54px;
-  letter-spacing: -0.01em;
+  line-height: 44px;
 }
 
 .section-block {
@@ -306,9 +320,9 @@ img {
 }
 
 .section-heading h2 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 38px;
   padding-top: 24px;
 }
 
@@ -680,11 +694,6 @@ img {
     font-size: 14px;
   }
 
-  .nav-link--account img {
-    height: 16px;
-    width: 16px;
-  }
-
   .mobile-icon-button {
     align-items: center;
     border: 1px solid var(--gray-300);
@@ -742,8 +751,7 @@ img {
 
   .page-heading h1 {
     font-size: 32px;
-    line-height: 48px;
-    letter-spacing: -0.01em;
+    line-height: 40px;
   }
 
   .tab-nav--horizontal {
