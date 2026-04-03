@@ -175,7 +175,7 @@ img {
 .page-shell {
   display: grid;
   gap: 32px;
-  grid-template-columns: 266px minmax(0, 870px);
+  grid-template-columns: minmax(220px, 266px) minmax(0, 870px);
   justify-content: center;
   margin: 0 auto;
   max-width: 1440px;
@@ -189,6 +189,11 @@ img {
   padding-top: 16px;
 }
 
+.side-rail,
+.main-content {
+  min-width: 0;
+}
+
 .rail-card,
 .course-card,
 .empty-state {
@@ -199,6 +204,11 @@ img {
 
 .rail-card {
   padding: 16px;
+}
+
+.rail-card--nav,
+.rail-card--cta {
+  width: 100%;
 }
 
 .rail-card h2,
@@ -741,6 +751,56 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-left: 36px;
     padding-right: 36px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 835px) {
+  .portal-header__inner {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .page-shell {
+    gap: 24px;
+    grid-template-columns: minmax(208px, 0.8fr) minmax(0, 2.2fr);
+    max-width: 1100px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .side-rail {
+    gap: 12px;
+  }
+
+  .rail-card {
+    padding: 14px;
+  }
+
+  .course-card__header,
+  .course-card__content,
+  .course-card__footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .course-card__footer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .course-card__content {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
+  }
+
+  .course-card__image-wrap {
+    width: 100%;
+  }
+
+  .course-card__meta {
+    min-width: 0;
+    width: 100%;
   }
 }
 
