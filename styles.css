@@ -932,6 +932,7 @@ img {
   }
 
   .course-card__actions {
+    display: grid;
     gap: 10px;
   }
 
@@ -943,6 +944,11 @@ img {
   .action-button,
   .progress-button {
     min-height: 40px;
+  }
+
+  .course-card__actions .action-button {
+    justify-content: center;
+    width: 100%;
   }
 
   .empty-state {
